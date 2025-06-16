@@ -66,11 +66,10 @@ h2 {
 .line-two {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 1rem;
 }
-
-/* Responsive Design */
+/* ✅ Tablet */
 @media (max-width: 768px) {
     .btn {
         height: 150px;
@@ -85,8 +84,13 @@ h2 {
     h2 {
         font-size: 1.2rem;
     }
+
+    .line-one, .line-two {
+        flex-direction: row; /* Important: row in all views */
+    }
 }
 
+/*  Mobile */
 @media (max-width: 480px) {
     .btn {
         height: 100px;
@@ -102,9 +106,7 @@ h2 {
         font-size: 1rem;
     }
 
-    .line-one,
-    .line-two {
-        flex-direction: column;
-        gap: 1rem;
+    .line-one, .line-two {
+        flex-direction: row; /* ✅ Keep 2x2 structure */
     }
 }
