@@ -1,112 +1,121 @@
+/*  Base Styles */
 body {
-    text-align: center;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #222;
 }
 
+/*  Heading Styles */
 h1 {
-    font-size: 2.5rem;
-    margin-top: 1rem;
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: #333;
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #555;
 }
 
+footer p {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/*  Game Button Styles */
 .btn {
-    height: 200px;
-    width: 200px;
-    border-radius: 20%;
-    border: 10px solid black;
-    margin: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+  height: 180px;
+  width: 180px;
+  border-radius: 20%;
+  border: 8px solid #333;
+  margin: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
 }
 
 .btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .red {
-    background-color: #d95980;
+  background-color: #d95980;
 }
 
 .yellow {
-    background-color: #f99b45;
+  background-color: #f99b45;
 }
 
 .green {
-    background-color: #63aac0;
+  background-color: #63aac0;
 }
 
 .purple {
-    background-color: #819ff9;
+  background-color: #819ff9;
 }
 
+/*  Flash Effects */
 .flash {
-    background-color: white !important;
+  background-color: white !important;
 }
 
 .userflash {
-    background-color: green !important;
+  background-color: green !important;
 }
 
-/* Layout fix */
+/*  Layout */
 .box-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .line-one,
 .line-two {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
-/* ✅ Tablet */
+
+/*  Responsive Design */
 @media (max-width: 768px) {
-    .btn {
-        height: 150px;
-        width: 150px;
-        margin: 1rem;
-    }
+  .btn {
+    height: 130px;
+    width: 130px;
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    .line-one, .line-two {
-        flex-direction: row; /* Important: row in all views */
-    }
+  h2 {
+    font-size: 1.2rem;
+  }
 }
 
-/*  Mobile */
 @media (max-width: 480px) {
-    .btn {
-        height: 100px;
-        width: 100px;
-        margin: 0.8rem;
-    }
+  .btn {
+    height: 100px;
+    width: 100px;
+    margin: 0.6rem;
+  }
 
-    h1 {
-        font-size: 1.5rem;
-    }
+  h1 {
+    font-size: 1.5rem;
+  }
 
-    h2 {
-        font-size: 1rem;
-    }
+  h2 {
+    font-size: 1rem;
+  }
 
-    .line-one, .line-two {
-        flex-direction: row; /* ✅ Keep 2x2 structure */
-    }
+  .line-one,
+  .line-two {
+    flex-direction: row;
+  }
 }
